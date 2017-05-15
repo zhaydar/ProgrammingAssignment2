@@ -1,0 +1,15 @@
+cacheSolve & makeCacheMatrix are used in conjunction as follows:
+
+## create a test matrix with a command such as the one below. 
+> testMatrix <- matrix(rnorm(16),4,4)
+
+## It is important that the matrix be invertible, hence the use of rnorm. Otherwise, an error is returned if the matrix is singular
+
+## next run makeCacheMatrix and store return value in M1
+> M1 <- makeCacheMatrix(testMatrix)
+
+## last run cacheSolve on M1
+> cacheSolve(M1)
+
+## if the inverse of the matrix has not been cached already, the script prints out the message "didn't use cached data" along with result
+## if the inverse of the matrix has already cached, the script prints out the message "using cached data" along with result
